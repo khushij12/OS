@@ -38,7 +38,10 @@ Thread is a path of execution within a process. A thread is also known as a ligh
 A computer can address more memory than the amount physically installed on the system. This extra memory is actually called virtual memory and it is a section of a hard disk that’s set up to emulate the computer’s RAM. The main visible advantage of this scheme is that programs can be larger than physical memory. Virtual memory serves two purposes. First, it allows us to extend the use of physical memory by using a disk. Second, it allows us to have memory protection, because each virtual address is translated to a physical address.
 
 **Thrashing:**
-Thrashing is a condition or a situation when the system is spending a major portion of its time in servicing the page faults, but the actual processing done is very negligible. High degree of multiprogramming(if number of processes keeps on increasing in the memory), lack of frames (if a process is allocated too few frames, then there will be too many and too frequent page faults) causes Thrashing.
+Thrashing is a condition or a situation when the system is spending a major portion of its time in servicing the page faults, but the actual processing done is very negligible. 
+
+## Why does thrashing occur? 
+High degree of multiprogramming(if number of processes keeps on increasing in the memory) , lack of frames(if a process is allocated too few frames, then there will be too many and too frequent page faults.) causes Thrashing.
 
 ## What is RAID ? Different types. 
 RAID, or “Redundant Arrays of Independent Disks” is a technique which makes use of a combination of multiple disks instead of using a single disk for increased performance, data redundancy or both.Data redundancy, although taking up extra space, adds to disk reliability. This means, in case of disk failure, if the same data is also backed up onto another disk, we can retrieve the data and go on with the operation.
@@ -63,3 +66,70 @@ An unwanted problem in the operating system in which the processes are loaded an
 Types of fragmentation:
 1. Internal
 2. External
+
+## What is spooling ? 
+SPOOL is an acronym for simultaneous peripheral operations online. Spooling is a process in which data is temporarily held to be used and executed by a device, program, or system.
+In spooling, there is no interaction between the I/O devices and the CPU. That means there is no need for the CPU to wait for the I/O operations to take place. Such operations take a long time to finish executing, so the CPU will not wait for them to finish.
+The biggest example of Spooling is printing. The documents which are to be printed are stored in the SPOOL and then added to the queue for printing. During this time, many processes can perform their operations and use the CPU without waiting while the printer executes the printing process on the documents one-by-one.
+
+## What is semaphore and mutex (Differences might be asked)? Define Binary semaphore.
+Semaphore and mutex are synchronization primitives used in concurrent programming to control access to shared resources. While they serve similar purposes, there are some differences between them.
+
+Semaphore:
+A semaphore is a synchronization object that maintains a count and is used to control access to a shared resource. It allows multiple threads or processes to access the shared resource simultaneously up to a certain limit defined by the count.
+
+Differences:
+
+Ownership: A mutex is typically used to provide mutual exclusion, allowing only one thread or process to access a shared resource at a time. In contrast, a semaphore can allow multiple threads or processes to access a resource simultaneously up to a certain limit.
+
+Counting: A semaphore maintains a count, which represents the number of available resources. Threads or processes can acquire or release the semaphore based on the count. In contrast, a mutex doesn't maintain a count; it is either locked (unavailable) or unlocked (available).
+
+Wait and Signal Operations: Semaphore provides two fundamental operations: wait (P) and signal (V). The wait operation decreases the semaphore count, blocking if the count is zero, and the signal operation increases the count. Mutex, on the other hand, provides lock and unlock operations. The thread or process acquires the mutex lock and releases it when finished.
+
+Binary Semaphore:
+A binary semaphore is a special case of a semaphore where the count is limited to either 0 or 1. It can be thought of as a mutex with different terminology. Binary semaphores are often used for signaling between threads or processes, where one thread signals an event to another thread.
+
+## Belady’s Anomaly
+Bélády’s anomaly is the name given to the phenomenon where increasing the number of page frames results in an increase in the number of page faults for a given memory access pattern.
+
+Solution to fix Belady’s Anomaly:
+Implementing alternative page replacement algo helps eliminate Belady’s Anomaly.. Use of stack based algorithms, such as Optimal Page Replacement Algorithm and Least Recently Used (LRU) algorithm, can eliminate the issue of increased page faults as these algorithms assign priority to pages
+
+## Starving and Aging in OS
+Starving/Starvation(also called Lived lock): Starvation is the problem that occurs when low priority processes get jammed for an unspecified time as the high priority processes keep executing. So starvation happens if a method is indefinitely delayed.
+Solution to Starvation : Ageing is a technique of gradually increasing the priority of processes that wait in the system for a long time.
+
+## What is paging and why do we need it? 
+Paging is a memory management scheme that eliminates the need for contiguous allocation of physical memory. This scheme permits the physical address space of a process to be non – contiguous.
+Paging is used for faster access to data. When a program needs a page, it is available in the main memory(RAM) as the OS copies a certain number of pages from your storage device to main memory. Paging allows the physical address space of a process to be noncontiguous.
+
+## Demand Paging, Segmentation 
+Demand paging is a method of virtual memory management which is based on the principle that pages should only be brought into memory if the executing process demands them. This is often referred to as lazy evaluation as only those pages demanded by the process are swapped from secondary storage to main memory.
+So demand paging works opposite to the principle of loading all pages immediately.
+
+Segmentation is a memory management technique in which the memory is divided into the variable size parts. Each part is known as a segment which can be allocated to a process.
+
+The details about each segment are stored in a table called a segment table. Segment table is stored in one (or many) of the segments.
+
+Segment table contains mainly two information about segment:
+
+Base: It is the base address of the segment
+Limit: It is the length of the segment.
+
+## Real Time Operating System, types of RTOS. 
+A real-time operating system (RTOS) is a special-purpose operating system used in computers that has strict time constraints for any job to be performed and is intended to serve real time applications that possess data as it comes in , typically without buffer delays.
+
+Types of RTOS:
+
+Hard RTOS: A real-time operating system (RTOS) with strict timing guarantees, where tasks must meet their deadlines deterministically.
+Firm RTOS: A real-time operating system (RTOS) with flexible timing guarantees, where tasks have relatively predictable timing behavior but occasional deadline misses are allowed.
+Soft RTOS: A real-time operating system (RTOS) with relaxed timing guarantees, where meeting task deadlines is not critical, and occasional deadline misses are acceptable without causing system failure.
+
+## Difference between main memory and secondary memory. 
+**Main memory**, also known as primary memory or RAM (Random Access Memory), is a volatile and fast storage medium that stores data and instructions that are actively being used by the CPU. It provides quick access to the data needed for processing, and its contents are lost when the power supply is turned off.
+
+**Secondary memory**, on the other hand, refers to non-volatile storage devices that are used for long-term storage of data, even when power is removed. Examples of secondary memory include hard disk drives (HDDs), solid-state drives (SSDs), optical disks, and magnetic tapes. Secondary memory has a larger capacity than main memory but slower access speeds.
+
+
+
+## Dynamic Binding 
