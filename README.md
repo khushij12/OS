@@ -133,3 +133,65 @@ Soft RTOS: A real-time operating system (RTOS) with relaxed timing guarantees, w
 
 
 ## Dynamic Binding 
+ 
+Static binding happens when the code is compiled, while dynamic bind happens when the code is executed at run time.
+
+**Static Binding:**
+When a compiler acknowledges all the information required to call a function or all the values of the variables during compile time, it is called “static binding”. As all the required information is known before runtime, it increases the program efficiency and it also enhances the speed of execution of a program. Static Binding makes a program very efficient, but it declines the program flexibility, as ‘values of variable’ and ‘function calling’ are predefined in the program. Static binding is implemented in a program at the time of coding. Overloading a function or an operator is the example of compile time polymorphism i.e. static binding.
+
+**Dynamic Binding** Calling a function or assigning a value to a variable, at run-time is called “Dynamic Binding”. Dynamic binding can be associated with run time ‘polymorphism’ and ‘inheritance’ in OOP. Dynamic binding makes the execution of a program flexible as it can decide what value should be assigned to the variable and which function should be called, at the time of program execution. But as this information is provided at run time it makes the execution slower as compared to static binding.
+
+## FCFS Scheduling 
+
+## SJF Scheduling 
+
+## SRTF Scheduling 
+
+## LRTF Scheduling 
+This is a preemptive version of Longest Job First (LJF) scheduling algorithm. In this scheduling algorithm, we find the process with the maximum remaining time and then process it. We check for the maximum remaining time after some interval of time(say 1 unit each) to check if another process having more Burst Time arrived up to that time.
+
+## Priority Scheduling 
+Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as per the priority.
+
+The processes with higher priority should be carried out first, whereas jobs with equal priorities are carried out on a round-robin or FCFS basis. Priority depends upon memory requirements, time requirements, etc.
+
+## Round Robin Scheduling 
+In Round-robin scheduling, each ready task runs turn by turn only in a cyclic queue for a limited time slice. This algorithm also offers starvation free execution of processes. Widely used preemptive scheduling method in traditional OS. All the jobs get a fair allocation of CPU. Cons include : Finding a correct time quantum is a quite difficult task in this system, Round-robin scheduling doesn’t give special priority to more important tasks.
+
+## Producer Consumer Problem 
+About Producer-Consumer problem: The Producer-Consumer problem is a classic problem that is used for multi-process synchronisation i.e. synchronisation between more than one processes.
+
+The job of the Producer is to generate the data, put it into the buffer, and again start generating data. While the job of the Consumer is to consume the data from the buffer.
+
+**What’s the problem here?**
+The following are the problems that might occur in the Producer-Consumer:
+
+The producer should produce data only when the buffer is not full. If the buffer is full, then the producer shouldn’t be allowed to put any data into the buffer.
+The consumer should consume data only when the buffer is not empty. If the buffer is empty, then the consumer shouldn’t be allowed to take any data from the buffer.
+The producer and consumer should not access the buffer at the same time.
+
+We can solve this problem by using semaphores.
+
+## Banker’s Algorithm 
+Banker algorithm used to avoid deadlock and allocate resources safely to each process in the computer system. The ‘S-State’ examines all possible tests or activities before deciding whether the allocation should be allowed to each process. It also helps the operating system to successfully share the resources between all the processes. The banker’s algorithm is named because it checks whether a person should be sanctioned a loan amount or not to help the bank system safely simulate allocation resources.
+
+## Explain Cache
+Cache memory is an extremely fast memory type that acts as a buffer between RAM and the CPU. It holds frequently requested data and instructions so that they are immediately available to the CPU when needed.
+
+## Diff between direct mapping and associative mapping 
+**Direct Mapping:**
+In direct mapping, each block of main memory is mapped to a specific block in the cache memory.
+
+The mapping is done using a direct mapping function, which typically involves dividing the main memory address into different fields, with one field representing the cache block index.
+
+**Associative Mapping:**
+In associative mapping, each block of main memory can be placed in any cache block, and there is no fixed mapping.
+
+The cache memory searches the entire cache to find the desired block, comparing the memory block's address with all the addresses stored in the cache.
+
+
+## Diff between multitasking and multiprocessing 
+Multitasking refers to the ability of an operating system to execute multiple tasks concurrently. In multitasking, the CPU switches between tasks rapidly, giving the illusion that multiple tasks are running simultaneously. 
+
+Multiprocessing, on the other hand, involves the use of multiple processors or CPU cores to execute tasks simultaneously. In multiprocessing, tasks are distributed among different processors, enabling them to be executed in parallel. 
+
