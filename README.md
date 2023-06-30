@@ -195,3 +195,43 @@ Multitasking refers to the ability of an operating system to execute multiple ta
 
 Multiprocessing, on the other hand, involves the use of multiple processors or CPU cores to execute tasks simultaneously. In multiprocessing, tasks are distributed among different processors, enabling them to be executed in parallel. 
 
+What is an operating system and its role in computer systems?
+📒Explain the difference between a process and a thread.
+📒What are the main functions of an operating system?
+📒How does virtual memory work in an operating system?
+📒Describe the concept of process synchronization and its importance.
+📒What are the different scheduling algorithms used in operating systems?
+📒What is the role of the file system in an operating system?
+📒How does an operating system handle memory management?
+📒Explain the concept of deadlock and how it can be avoided.
+📒What is a device driver and what is its purpose?
+📒Describe the differences between a monolithic kernel and a microkernel.
+📒How does an operating system handle I/O operations?
+📒What is the role of the interrupt handler in an operating system?
+📒Explain the concept of demand paging in virtual memory management.
+📒What is the difference between preemptive and non-preemptive schedule
+📒How does a process communicate with another process in an operating system?
+📒What is the purpose of a system call in an operating system?
+📒Describe the concept of mutual exclusion and its importance in operating systems.
+📒How does an operating system handle file permissions and security?
+📒Explain the concept of multithreading and its advantages.
+📒What is a semaphore and how is it used in process synchronization?
+📒Describe the role of the process scheduler in an operating system.
+📒How does an operating system handle input and output devices?
+📒Explain the concept of virtualization and its benefits.
+📒What is a context switch and when does it occur?
+📒Describe the role of the cache in an operating system.
+📒How does an operating system handle page faults?
+📒What is the purpose of a command interpreter or shell in an operating system?
+📒Explain the concept of I/O buffering and its advantages.
+📒What is the role of the memory manager in an operating system?
+📒How does an operating system handle inter-process communication?
+📒Describe the concept of process creation and termination.
+📒What is a race condition and how can it be avoided in operating systems?
+📒How does an operating system handle interrupts?
+📒Explain the concept of spooling in an operating system.
+📒What is the difference between a real-time operating system and a general-purpose operating system?
+📒Describe the role of the page table in virtual memory management.
+📒How does an operating system handle file system fragmentation?
+📒Explain the concept of thrashing and its impact on system performance.
+📒What is the purpose of a bootloader in an operating system?
